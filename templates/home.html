@@ -1,0 +1,28 @@
+{% extends 'nav.html' %}
+{% block content %}
+<div class="jumbotron container">
+    <h1 class="display-4">Welcome!</h1>
+    <p class="lead">URL Shorteners shorten your URLs. And this is actually useful in a variety of scenarios. Think of Twitter for example: shorten links for Twitter posts as each one counts with the limited set of characters at your disposal.</p>
+    <hr class="my-4">
+    <p>If you want to leran more then click on below button.</p>
+    <a class="btn btn-primary btn-lg" href="https://blog.rebrandly.com/what-is-a-url-shortener/" role="button">Learn more</a>
+  </div>
+
+{% if error %}
+
+<div class="container shadow p-4">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>The Url you are looking for doesn't exist</p>
+            <a href="/dashboard" class="btn btn-primary">Shorten A Url</a>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+</body>
+
+</html>
+
+{% endblock %}
